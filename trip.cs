@@ -28,7 +28,7 @@ namespace TravelOffice
         {
             this.price = price;
         }
-        public String getinfo()
+        public virtual String getinfo()
         {
             return ToString();
         }

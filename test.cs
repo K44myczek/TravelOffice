@@ -152,18 +152,19 @@ namespace TravelOffice
             customer testcustomer = new customer("Paweł");
             date start = new date(1, 1, 1);
             date end = new date(1, 1, 1);
-            trip testtripu = new trip(start, end, "Konin");
-            testtripu.prizeoftrip(5000);
-            testcustomer.setAddress(testadresu);
-            testcustomer.setTrip(testtripu);
-            domestictrip test = new domestictrip(start,end , "Konin");
+            //trip testtripu = new trip(start, end, "Konin");
+            //testtripu.prizeoftrip(5000);
             
+            trip test = new domestictrip(start, end, "Konin");
+            testcustomer.setAddress(testadresu);
+            testcustomer.setTrip(test);
+            test.prizeoftrip(1000);
+            ((domestictrip) test).getOwnArrival(100);            
 
 
-            test.getOwnArrival(1000);
-            test.Price = testtripu.Price;
-            test.gPrice();
+            ((domestictrip) test).gPrice();
             Console.WriteLine(test.getinfo());
+            Console.WriteLine(testcustomer.getinfo());
             
             
 

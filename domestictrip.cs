@@ -22,6 +22,10 @@ namespace TravelOffice
         {
            base.Price= base.Price - ownArrivalDiscount;
         }
-        
+
+        public override string getinfo()
+        {
+            return "domestic trip price= " + Price;
+        }
     }
 }
